@@ -1,0 +1,16 @@
+# Description: Bir çapraz platform uygulaması ve kullanıcı arabirimi çerçevesi
+# URL: http://qt-project.org/
+# Packager: Cihan Alkan
+# Depends on: xorg-proto xorg-libxkbfile xorg-xtrans xorg-libx11 xorg-libxext xorg-libfs xorg-libice xorg-libsm xorg-libxscrnsaver xorg-libxt xorg-libxmu xorg-libxpm xorg-libxaw xorg-libxfixes xorg-libxcomposite xorg-libxrender xorg-libxcursor xorg-libxdamage xorg-libfontenc xorg-libxfont xorg-libxft xorg-libxi xorg-libxinerama xorg-libxrandr xorg-libxres xorg-libxtst xorg-libxv xorg-libxvmc xorg-libxxf86dga xorg-libxxf86vm xorg-libdmx xorg-libpciaccess xorg-libxkbfile xorg-libxshmfence  xcb-proto xcb-util-image xcb-util-keysyms xcb-util-renderutil xcb-util-wm alsa-lib ca-certificates cups dbus glib gstreamer-plugins-base icu jasper libproxy libinput libjpeg-turbo libmng libpng libtiff libwebp xorg-mesa mtdev openssl pcre sqlite ruby gstreamer1-plugins-base geoclue gtk2 harfbuzz postgresql pulseaudio unixodbc libxkbcommon mariadb
+
+name=qtbase
+version=5.9.1
+release=1
+source=(http://downloads.nutyx.org/x86_64/development/gui/qtbase/qtbase1503565572x86_64.cards.tar.xz)
+
+build() {
+    mkdir $PKG/usr
+	cp -r $SRC/usr/* $PKG/usr/
+    mkdir $PKG/etc
+	cp -r $SRC/etc/* $PKG/etc/
+}
